@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "e9ezXCb/3sMRv2v0OzoiAPLe2McC4+Hwv6HdkFK9ILHs5bO3jwNo1jtzTbeBtM0hbnhuGVJ++3ty2ejqdrEmaQ==",
+  "success": true,
+  "projectFilePath": "/Users/milchtank/Documents/Schule/Juventus/BMIXamarin/XamarinBmi/XamarinBmi.iOS/XamarinBmi.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/milchtank/.nuget/packages/acr.userdialogs/7.1.0.514/acr.userdialogs.7.1.0.514.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/behaviors.forms/1.4.0/behaviors.forms.1.4.0.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/btprogresshud/1.3.1/btprogresshud.1.3.1.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/sqlite-net-pcl/1.7.335/sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/sqlitepclraw.bundle_green/2.0.3/sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/sqlitepclraw.core/2.0.3/sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.3/sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/xamarin.essentials/1.7.1/xamarin.essentials.1.7.1.nupkg.sha512",
+    "/Users/milchtank/.nuget/packages/xamarin.forms/5.0.0.2337/xamarin.forms.5.0.0.2337.nupkg.sha512"
+  ],
+  "logs": []
+}
