@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinBmi.Views.HistoryPage"            
+             Title="BMI Verlauf"
+             xmlns:vm="clr-namespace:XamarinBmi.Models">
+
+    <ContentPage.BindingContext>
+        <vm:HistoryPage />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Verlauf löschen" 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    FontSize="16"
+                    Margin="10,0,10,0"
+                    VerticalOptions="EndAndExpand"
+                    Command="{Binding DeleteHistory}"/>
+
+                <ListView ItemsSource="{Binding Path=Data, UpdateSourceEventName=PropertyChanged}" Grid.Row="2" Grid.ColumnSpan="2" Margin="0" HasUnevenRows="True" VerticalOptions="EndAndExpand" HeightRequest="450" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal" Margin="5,5,0,0">
+                                        <StackLayout Orientation="Horizontal" HeightRequest="20" WidthRequest="170" >
+                                            <Label Text="Datum:" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"
+                                                 />
+
+                                            <Label Text="{Binding Date}" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HeightRequest="20" WidthRequest="110">
+                                            <Label Text="Grösse:" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+
+                                            <Label Text="{Binding Height}" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+
+                                            <Label Text="cm" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal" Margin="5,0,0,5">
+                                        <StackLayout Orientation="Horizontal" HeightRequest="20" WidthRequest="170">
+                                            <Label Text="BMI:" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+
+                                            <Label Text="{Binding BMI}" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HeightRequest="20" WidthRequest="110">
+                                            <Label Text="Gewicht:" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+
+                                            <Label Text="{Binding Weight}" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+
+                                            <Label Text="kg" 
+                                               FontSize="14"
+                                               VerticalOptions="Center"/>
+                                        </StackLayout>
+                                    </StackLayout>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

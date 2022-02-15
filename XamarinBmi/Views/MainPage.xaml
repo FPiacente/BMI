@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:XamarinBmi.Models"
+             x:Class="XamarinBmi.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainPage />
+    </ContentPage.BindingContext>
+
+    <StackLayout BackgroundColor="#eef6fb">
+        <Label Text="BMI Rechner"
+               HorizontalTextAlignment="Center"
+               TextColor="Green"
+               FontSize="36"/>
+        
+        <Label Margin="20,20,20,20" 
+               HorizontalTextAlignment="Center" 
+               TextColor="Black" 
+               FontSize="16" 
+               Text="Der Body-Mass-Index – auch Körpermasseindex, Körpermassenzahl oder Quetelet-Kaup-Index – ist eine Maßzahl für die Bewertung des Körpergewichts eines Menschen in Relation zu seiner Körpergröße. Sie wurde 1832 von Adolphe Quetelet sowie nach dem Ersten Weltkrieg von Ignaz Kaup entwickelt."/>
+
+        <Image x:Name="bmi" 
+               Source="bmi.png" 
+               Margin="10,20,10,10">
+        </Image>
+
+        <Button Text="Starten!"
+            FontSize="16"
+            Margin="20"
+            HeightRequest="60"
+            VerticalOptions="EndAndExpand"
+            Command="{Binding StartXamarinBmiApplication}"/>
+    </StackLayout>
+
+</ContentPage>

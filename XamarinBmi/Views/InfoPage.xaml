@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinBmi.Views.InfoPage"
+             xmlns:model="clr-namespace:XamarinBmi.Models"
+             Title="BMI Details">
+
+    <ContentPage.BindingContext>
+        <model:InfoPageModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Path=BmiInfo, UpdateSourceEventName=PropertyChanged}" ItemTapped="DetailItemTapped" SelectedItem="{Binding SelectedDetail}" HasUnevenRows="True">
+               <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                                <Label Text="{ Binding Title}"     
+                                FontSize="18"
+                                Margin="20,10,10,10" 
+                                FontAttributes="Bold"
+                                VerticalOptions="Center"/>
+                            
+                                <Label Text="{ Binding Range}" 
+                                IsVisible="{ Binding IsVisible}"
+                                FontSize="14"
+                                Margin="40,0,0,0" 
+                                VerticalOptions="Center"/>
+
+                                <Label Text="{ Binding Description}" 
+                                IsVisible="{ Binding IsVisible}"
+                                FontSize="14"
+                                Margin="40,0,0,20" 
+                                VerticalOptions="Center"/>
+
+                            </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
